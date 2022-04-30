@@ -1,0 +1,49 @@
+{
+  "responsecode": 200,
+  "responseMessage": "",
+  "responseResult": true,
+  "data": {
+    "post_title": "",
+    "category": "",
+    "videoUrl": {
+      "sub": [
+        {
+          "channel_name": "",
+          "url": ""
+        }
+      ],
+      "dub": [
+        {
+          "channel_name": "",
+          "url": ""
+        },
+        {
+          "channel_name": "",
+          "url": ""
+        }
+      ]
+    },
+    "anime_details": {
+      "title": "",
+      "description": "",
+      "type": " Tv series | movies etc  ",
+      "studio": "",
+      "release_date": "",
+      "genre": [
+        {
+          "genre_type": "",
+          "url": ""
+        },
+        {
+          "genre_type": "",
+          "url": ""
+        }
+      ],
+      "scores": "",
+      "premiered": "",
+      "duration": "",
+      "quality": "",
+      "view": "7,100"
+    }
+  }
+}

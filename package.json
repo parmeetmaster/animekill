@@ -6,17 +6,25 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "eslint": "^8.14.0",
+    "eslint-plugin-react": "^7.29.4",
+    "express": "^4.18.0",
+    "mysql": "^2.18.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
+    "recoil": "^0.7.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "node server/index.js",
+    "eject": "react-scripts eject",
+    "stop": "killall -9 node"
   },
+  "proxy": "http://localhost:4001",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -34,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react-qtip": "^1.0.9",
+    "react-router-dom": "^6.3.0"
   }
 }
