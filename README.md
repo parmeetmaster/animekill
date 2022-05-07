@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+malscrapper for get data myanime.live
+
+
+Edit 
+get value from meta tag use to get video links 
+https://kissanimefree.tv/ajax-get-link-stream/?server=streamango&filmId=146865
+
+find vtt files in script
+In order to get subtitles faster https://www.anichan.co.in//uploads//subtitles//Against_89_-j0LvC5G2fKydBUS.vtt
+
+
+SELECT * FROM anime WHERE uuid=(SELECT anime.uuid FROM anime WHERE anime.id=(SELECT `slug_reference` FROM `metaContent` WHERE slug_text='doupo')) && enable_search=1;

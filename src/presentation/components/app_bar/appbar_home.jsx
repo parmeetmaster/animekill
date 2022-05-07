@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 
-export  function Appbar() {
+export  function AppbarHome() {
 
 /*    const [statedata,setStateData]=React.useState({user:"ami jackson"});
 
@@ -161,7 +161,7 @@ export  function Appbar() {
                         <div className="clearfix"></div>
                     </div>
                     <a href="/" id="logo" title="">
-                        <img src="https://9anime.vc/images/logo.png" title="" alt=""/>
+                        <img src="https://AnimeKill.vc/images/logo.png" title="" alt=""/>
                         <div className="clearfix"></div>
                     </a>
                     <div id="header_right">

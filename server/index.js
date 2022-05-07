@@ -1,18 +1,14 @@
-let {SqlWrapper} = require('../server/sql/sql_wrapper');
+//const home_client=require('routes/anime_client/home/home_route')  ;
+
+//var myRoutes = require('./homeroute');
+var myRoutes = require('./routes/anime_client/home/home_route');
 
 const express = require("express");
-
+const app = express();
 const PORT = process.env.PORT || 4001;
 
-const app = express();
 
 
-app.get("/", (req, res) => {
-    SqlWrapper();
-    res.json({ message: "Hello from server!" });
-});
-
-
-app.listen(PORT, () => {
+app.use(myRoutes).listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
