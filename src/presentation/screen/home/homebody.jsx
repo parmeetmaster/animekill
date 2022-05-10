@@ -22,7 +22,7 @@ function HomeBody(props) {
                                     <div className="search-submit">
                                         <div className="search-icon btn-search"><i className="fa fa-search"></i></div>
                                     </div>
-                                    <input type="text" value={""} onChange={{onChangeval}} className="form-control search-input" name="keyword"
+                                    <input type="text"  onChange={onChangeval} className="form-control search-input" name="keyword"
                                            placeholder="Enter anime name..."/>
                                 </form>
                             </div>

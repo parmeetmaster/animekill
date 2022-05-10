@@ -1,7 +1,7 @@
 import '../../css/style.css'
 import React from "react";
-import Helmet from "react-helmet";
 
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import HomeBody from "./homebody";
 import Footer from "../../components/footer/main_footer";
 import {AppbarHome} from "../../components/app_bar/appbar_home";
