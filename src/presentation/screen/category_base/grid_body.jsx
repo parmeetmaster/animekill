@@ -1,5 +1,7 @@
 export function GridBody() {
 
+function onChangeval(e){}
+    
     return (<>
 
         <div id="main-wrapper">
@@ -917,7 +919,7 @@ export function GridBody() {
                                 <div id="sidebar-search">
                                     <div className="search-content">
 
-                                        <input type="text" className="form-control search-input"
+                                        <input onChange={onChangeval} type="text" className="form-control search-input"
                                                placeholder="Search..."/>
                                     </div>
                                 </div>
@@ -982,7 +984,7 @@ export function GridBody() {
                                     className="fas fa-angle-left"></i> Previous</a></div>
                                 <div className="ap__-input">
                                     <div className="btn btn-sm btn-blank">page</div>
-                                    <input className="form-control form-control-dark input-page" value="1"
+                                    <input onChange={onChangeval} className="form-control form-control-dark input-page" value="1"
                                            data-url="/search?keyword=battle through the heaven&amp;page="
                                            data-toggle="tooltip" data-placement="top" title="Enter a number"/>
                                         <button type="button" className="btn btn-sm btn-focus btn-go-page">go</button>

@@ -2,6 +2,9 @@ import React from "react";
 import SignInModel from "../../components/modal/sign_in_model";
 
 function HomeBody(props) {
+
+    function onChangeval(E){}
+
     return (<>
         <div id="main-wrapper">
             <div id="mw-top">
@@ -19,7 +22,7 @@ function HomeBody(props) {
                                     <div className="search-submit">
                                         <div className="search-icon btn-search"><i className="fa fa-search"></i></div>
                                     </div>
-                                    <input type="text" className="form-control search-input" name="keyword"
+                                    <input type="text" value={""} onChange={{onChangeval}} className="form-control search-input" name="keyword"
                                            placeholder="Enter anime name..."/>
                                 </form>
                             </div>

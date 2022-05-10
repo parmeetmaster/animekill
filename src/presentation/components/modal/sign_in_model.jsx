@@ -41,7 +41,7 @@ export default function SignInModel() {
                                                 me</label>
                                         </div>
                                         <div className="float-right">
-                                            <a href="javascript:;"
+                                            <a href="www.google.com"
                                                className="link-highlight text-forgot forgot-tab-link">Forgot
                                                 password?</a>
                                         </div>
