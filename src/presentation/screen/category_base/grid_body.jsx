@@ -773,7 +773,7 @@ function onChangeval(e){}
                                         <ul className="ulclear ul-filter">
                                             <li id="status-all">
                                                 <div className="acustom custom-control custom-radio">
-                                                    <input checked="" type="radio" value="all"
+                                                    <input  type="radio" value="all"
                                                            className="custom-control-input" name="radio-status"
                                                            id="input-status-all"/>
                                                         <label className="custom-control-label"
@@ -852,7 +852,7 @@ function onChangeval(e){}
                                         <ul className="ulclear ul-filter">
                                             <li>
                                                 <div className="acustom custom-control custom-radio">
-                                                    <input checked="" type="radio" value="all"
+                                                    <input  type="radio" value="all"
                                                            className="custom-control-input" name="radio-sort"
                                                            id="input-sort-all"/>
                                                         <label className="custom-control-label"
