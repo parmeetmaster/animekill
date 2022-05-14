@@ -12,7 +12,7 @@ function HomeBody(props) {
                     <div className="mwt-content">
                         <div className="mwh-logo">
                             <a href="/" className="mwh-logo-div">
-                                <img src="/images/logo.png" alt="AnimeKill"/>
+                                <img src="images/logo.png" alt="AnimeKill"/>
                             </a>
                             <div className="clearfix"></div>
                         </div>

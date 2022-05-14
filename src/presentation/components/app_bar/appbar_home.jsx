@@ -161,7 +161,7 @@ export  function AppbarHome() {
                         <div className="clearfix"></div>
                     </div>
                     <a href="/" id="logo" title="">
-                        <img src="https://AnimeKill.vc/images/logo.png" title="" alt=""/>
+                        <img src="/images/logo.png" title="" alt=""/>
                         <div className="clearfix"></div>
                     </a>
                     <div id="header_right">
