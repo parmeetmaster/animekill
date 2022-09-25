@@ -1,7 +1,7 @@
 const malScraper = require('mal-scraper');
 
 
-const myAnimeParseAnime = async () => {
+const myAnimeParseAnimeTest = async () => {
 
     return await new Promise(function (resolve, reject) {
         malScraper.getInfoFromURL('https://myanimelist.net/anime/40839/Kanojo_Okarishimasu')
@@ -13,8 +13,21 @@ const myAnimeParseAnime = async () => {
                 reject(err)
             })
     })
-
-
 }
 
-module.exports = {myAnimeParseAnime: myAnimeParseAnime};
+
+const myAnimeParseAnime = async (link) => {
+
+    return await new Promise(function (resolve, reject) {
+        malScraper.getInfoFromURL(link)
+            .then((data) => {
+                console.log(data)
+                resolve(data)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
+}
+
+module.exports = {myAnimeParseAnime: myAnimeParseAnime, myAnimeParseAnimeTest: myAnimeParseAnimeTest    };

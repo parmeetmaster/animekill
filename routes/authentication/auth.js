@@ -6,10 +6,6 @@ const {handleSuccess} = require("../../utils/response_handle_utils/response_hand
 const {jwtTokenGenerator, jwtTokenVerifier} = require("../../bin/authentication/jwt_controller");
 
 
-
-
-
-
 authRoute.post('/login', async function (req, res) {
     var response = await performLogin(req.body.email, req.body.password);
     console.log(req.body);      // your JSON

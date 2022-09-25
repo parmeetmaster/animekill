@@ -7,7 +7,8 @@ var commonRoute = require('../routes/common/common');
 const express = require("express");
 
 var winston = require('winston'), expressWinston = require('express-winston');
-const {animeRouter} = require("../routes/anime/anime_operations");
+const {animeRouter} = require("../routes/anime/anime_operations_web");
+const {animeMobileRouter} = require("../routes/anime/anime_operations_mobile");
 var app = express()
 
 const PORT = process.env.PORT || 3000;
@@ -38,6 +39,6 @@ app.use(expressWinston.logger({
 
 
 
-app.use([mainRoute, authRoute, animeRouter,commonRoute]).listen(PORT, () => {
+app.use([mainRoute, authRoute,animeMobileRouter, animeRouter,commonRoute]).listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });

@@ -12,6 +12,8 @@ const performQuery = async (query) => {
                     reject(new Failure(error.message));
                     return;
                 }
+
+
                 return resolve(results);
             });
             connection.end();
