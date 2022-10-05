@@ -4,6 +4,7 @@ var cors = require('cors')
 var mainRoute = require('../routes/index');
 var authRoute = require('../routes/authentication/auth');
 var commonRoute = require('../routes/common/common');
+var firebaseRoute = require('../routes/common/firebase_route');
 const express = require("express");
 
 var winston = require('winston'), expressWinston = require('express-winston');
@@ -19,6 +20,10 @@ app.use(cors());
 
 
 app.use(express.json());
+//app.use(bodyParser.urlencoded());
+app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
+
 app.use(expressWinston.logger({
     transports: [
         new winston.transports.Console()
@@ -39,6 +44,6 @@ app.use(expressWinston.logger({
 
 
 
-app.use([mainRoute, authRoute,animeMobileRouter, animeRouter,commonRoute]).listen(PORT, () => {
+app.use([mainRoute, authRoute,animeMobileRouter, animeRouter,firebaseRoute,commonRoute]).listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });

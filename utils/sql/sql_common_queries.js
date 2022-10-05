@@ -1,4 +1,5 @@
 const {getConnection} = require("../../utils/sql/core_sql");
+const Failure=require('../../models/core_models/failure_model')
 
 const performQuery = async (query) => {
     return await new Promise(function (resolve, reject) {
@@ -12,8 +13,6 @@ const performQuery = async (query) => {
                     reject(new Failure(error.message));
                     return;
                 }
-
-
                 return resolve(results);
             });
             connection.end();

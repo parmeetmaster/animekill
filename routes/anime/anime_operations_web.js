@@ -10,29 +10,6 @@ const {handleFailure} = require("../../utils/response_handle_utils/response_hand
 const {handleSuccess} = require("../../utils/response_handle_utils/response_handle_utils");
 const {jwtTokenVerifier} = require("../../bin/authentication/jwt_controller");
 
-animeRouter.get('/sentTestNotification', async function (req, res) {
-
-
-    firebaseMessenging("hell", "asdjasd", "dkashdhags")
-        .then(function resolve(){
-            res.statusCode = 200;
-            res.json(handleSuccess("Notifcation sent successfully",res.path,{}))
-
-        },function reject(){
-            res.statusCode = 403;
-            res.json(handleFailure("token invalid", req.path,))
-
-        })
-
-});
-
-animeRouter.get('/uploadImage', function (req, res) {
-    res.json({"staus":"ok"})
-
-});
-
-
-
 
 // return all anime in database without offset
 animeRouter.get('/getAnimeList', async function (req, res) {
@@ -59,12 +36,15 @@ animeRouter.get('/getAnimeList', async function (req, res) {
 // anime list using search keyword like "against"
 animeRouter.get('/getAnimeListUsingSearch', async function (req, res) {
     jwtTokenVerifier(req.headers["authtoken"]).then(function resolve() {
-        const query = "SELECT * FROM `AnimekillDetails` WHERE `synoyms` LIKE '%" + req.query.keywords + "%'";
+        //  const query = "SELECT * FROM `AnimekillDetails` WHERE `synoyms` LIKE '%" + req.query.keywords + "%'";
+        const query2 = "SELECT * FROM `AnimekillDetails` WHERE match(`synoyms`) against('+" + req.query.keywords + "sky ' IN BOOLEAN MODE)";
+        
         new Promise(function (mresolve, mreject) {
-            performQuery(query).then(function resolve(result) {
+            performQuery(query2).then(function resolve(result) {
                     let anime = []
                     result.forEach(function myFunction(item) {
-                        anime.push({"label": item["name"], "value": item.animeId});
+                        // anime.push({"label": ["name"], "value": item.animeId});
+                        anime.push(item);
                     });
                     res.json(handleSuccess("Anime parse successfully", req.path, {animeList: anime}))
                 }, function reject(error) {
