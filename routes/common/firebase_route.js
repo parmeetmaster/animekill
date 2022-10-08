@@ -32,7 +32,7 @@ admin.initializeApp(fireBaseConfig);
 const bucket=admin.storage().bucket();
 
 
-firebaseRoute.get('/sentTestNotification', async function (req, res) {
+firebaseRoute.post('/sentNotification', async function (req, res) {
 
 
     const registrationToken = 'ffx9zCplQ_6EPZFFNhLI4A:APA91bHaBMLmGY6dQyylACgpe4MfOz8ojocw59RkF73QqwXuSFqYLxyJwyZ_dJSrYTtlb_IRgP0CpOU3o4i0-AZQfflhNsxhx4FXt1QERgR82jN-M7y4Q9OVIMJzko3QMC6ZUzx_JRq4';
@@ -41,21 +41,18 @@ firebaseRoute.get('/sentTestNotification', async function (req, res) {
 
     const message = {
         notification: {
-            title: 'Sparky says hello!',
-            body:"Watch btth episode 12"
+            title: req.body.title,
+            body:req.body.body
         },
 
         android: {
 
             notification: {
-                imageUrl: test_image
+                imageUrl:req.body.image
             }
         },
 
-        data: {
-            "score": "madarchod",
-            "time": "15:10"
-        },
+        data: req.body.notification_data,
         apns: {
             payload: {
                 aps: {

@@ -99,7 +99,7 @@ animeMobileRouter.get('/getAnimeDetails', async function (req, res) {
 
 
 
-animeMobileRouter.get('/getAnimeListItem', async function (req, res) {
+animeMobileRouter.get('/getSinghAnimeListItem', async function (req, res) {
 
 
     const query = "SELECT * FROM `AnimekillDetails` WHERE `animeId`='"+req.query.animeId+"'";
